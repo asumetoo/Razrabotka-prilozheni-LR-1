@@ -1,0 +1,105 @@
+body {
+  background-color: #040043;
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  min-height: 100vh;
+  margin: 0;
+
+  background-image: url('c38bdf1731ad24d527719d58bdc46afc.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* опишем базовый стиль кнопки калькулятора */
+.my-btn { 
+  margin-right: 5px;           /* задаем отступ от кнопки справа */
+  margin-top: 5px;             /* задаем отступ от кнопки сверху*/
+  width: 50px;                 /* задаем ширину кнопки */
+  height: 50px;                /* задаем высоту кнопки */
+  border: none;                /* отключаем обводку */
+  background: #ff8fc9;         /* задаем серый цвет кнопки */
+  color: white;                /* задаем белый цвет текста внутри кнопки */
+  font-size: 1.5rem;           /* увеличим размер шрифта */
+  font-family: Arial, Helvetica, sans-serif; /* сменим шрифт */
+  cursor: pointer;             /* при наведении на кнопку курсор будет изменен
+                                  со стрелки на 'указательный палец' */
+  user-select: none;           /* отключаем возможность выделить текст внутри кнопки */
+  font-weight: bold;
+} 
+
+/* hover - это состояние элемента, когда на него наведен курсор */
+.my-btn:hover {
+  background: rgb(255, 0, 0); /* при наведение курсора на кнопку, она будет окрашена в серый */
+}
+
+/* active - это состояние активации элемента. В случае кнопки - нажатие на нее */
+.my-btn:active {
+  filter: brightness(130%); /* увеличим интенсивность цвета для эффекта вспышки */
+}
+
+/* селектор для кнопок первостепенных операций */
+.my-btn.primary { 
+  background: #f55ec5; /* цвет кнопки оранжевый */
+}
+
+/* селектор для кнопок второстепенных операций */
+.my-btn.secondary { 
+  background: #f5b7ea; /* цвет кнопки сервый */
+}
+
+/* селектор для кнопки расчета выражения (=) */
+.my-btn.execute { 
+  width: 110px;          /* сделаем кнопку шире других */
+}
+
+/* селектор для поля вывода результата */
+.result { 
+  width: 300px;
+  height: 70px;
+  margin-bottom: 15px;         /* отступ снизу */
+  padding-right: 10px;         /* выступ справа */
+  background: rgb(241, 92, 142); /* цвет можно задавать и таким образом */
+  text-align: right;           /* примагнитим текст к правой стороне */
+  color: #ffffff;              /* цвет текста белый */
+  font-size: 1.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 10px;   /* подкорректируем округлость */
+}
+
+.background_calculator {
+  background-color: #ffcdcd;
+  padding: 20px;
+  border-radius: 30px;
+  width: fit-content;
+}
+
+p.footer-text {
+  text-align: center;
+  color: #000000;   /* если фон тёмный */
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.bottom_change_color {
+  text-align: center;
+  background-color: #fd3265;
+  color: white;  
+  padding: 20px;
+  border-radius: 30px;
+  width: fit-content;
+  font-weight: bold;
+}
+
+/*выпадающий список для выбора цвета рамки калькулятора*/
+.background {
+  border: 3px solid transparent; /* основа, чтобы рамка была видна */
+  transition: border-color 0.3s;
+}
+
+.background.border-red { border-color: red; }
+.background.border-blue { border-color: blue; }
+.background.border-green { border-color: green; }
